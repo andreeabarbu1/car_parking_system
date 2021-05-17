@@ -2,13 +2,13 @@
 
 Servo servo;
 
-int ir_s1 = 3; //de langa breadboard
+int ir_s1 = 3; // primul ir (masina intra in parcare)
 int ir_s2 = 2;
 
 int total_space = 5;
 int space;
 
-int flag1 = 0; // flag pt senzor pt  a verifica daca masina a trecut
+int flag1 = 0; 
 int flag2 = 0;
 int carPassed = 0;
 
@@ -17,7 +17,7 @@ void setup() {
   pinMode(ir_s2, INPUT);
   
   servo.attach(4);
-  servo.write(120); // perpendicular cu partea opusa firelor stand jos
+  servo.write(120); 
   
  // delay (2000);
 
@@ -38,7 +38,8 @@ void loop(){
         delay(1000);
       }
     } else {
-      // LCD work - nu e suficient spatiu
+      //TODO
+      // LCD work - print: nu e suficient spatiu
     }
   }
 
